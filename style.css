@@ -1,20 +1,19 @@
-/* Color Palette: Warm Gold, Soft Yellow, Dark Brown */
+/* Color Palette derived strictly from the Power Logo */
 :root {
-  --bg-primary: #FEF9C3;
-  --bg-card: #FFFFFF;
-  --accent-gold: #EAB308;
-  --accent-light: #FDE047;
-  --text-dark: #713F12;
-  --text-muted: #A16207;
-  --border-color: #EAB308;
-  --footer-bg: #1E293B;
+  --bg-primary: #FEF08A;      /* Light yellow page background */
+  --bg-card: #FEF9C3;         /* Soft warm cream for cards */
+  --accent-gold: #EAB308;     /* Warm gold accent */
+  --accent-bright: #FDE047;   /* Bright power yellow */
+  --text-dark: #713F12;       /* Deep warm brown text */
+  --border-dark: #713F12;     /* Dark brown border matching logo outline */
+  --footer-bg: #713F12;       /* Deep brown footer background */
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 body {
@@ -25,15 +24,15 @@ body {
   flex-direction: column;
 }
 
-/* Header & Navigation Bar */
+/* Header & Top Navigation Bar */
 .navbar {
-  background-color: #FFFFFF;
-  border-bottom: 3px solid var(--accent-gold);
+  background-color: var(--accent-bright);
+  border-bottom: 3px solid var(--border-dark);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 2rem;
-  box-shadow: 0 2px 8px rgba(113, 63, 18, 0.1);
+  box-shadow: 0 3px 6px rgba(113, 63, 18, 0.15);
 }
 
 .nav-brand {
@@ -49,45 +48,46 @@ body {
 }
 
 .brand-title {
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: 800;
   color: var(--text-dark);
 }
 
 .nav-links {
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .nav-btn {
-  background: transparent;
-  border: 2px solid transparent;
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-dark);
   color: var(--text-dark);
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .nav-btn:hover {
-  background-color: var(--accent-light);
-  border-color: var(--accent-gold);
-}
-
-.nav-btn.active {
   background-color: var(--accent-gold);
   color: #FFFFFF;
 }
 
-/* Main Content Area */
+.nav-btn.active {
+  background-color: var(--text-dark);
+  color: #FEF08A;
+  border-color: var(--text-dark);
+}
+
+/* Main Layout Area */
 .content {
   flex: 1;
-  max-width: 1100px;
+  max-width: 1050px;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 2.5rem 1.5rem;
 }
 
 .page-section {
@@ -100,21 +100,23 @@ body {
 
 .hero {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .hero h1 {
   font-size: 2.2rem;
   color: var(--text-dark);
   margin-bottom: 0.5rem;
+  font-weight: 800;
 }
 
 .subtitle {
-  color: var(--text-muted);
+  color: var(--text-dark);
+  opacity: 0.9;
   font-size: 1.1rem;
 }
 
-/* Cards Layout */
+/* Home Grid Cards */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -123,46 +125,55 @@ body {
 
 .card {
   background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
+  border: 2px solid var(--border-dark);
+  border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 8px rgba(113, 63, 18, 0.08);
 }
 
 .card h3 {
   margin-bottom: 0.75rem;
   color: var(--text-dark);
+  font-size: 1.2rem;
 }
 
 .card p {
   line-height: 1.6;
-  color: #4A5568;
+  color: var(--text-dark);
 }
 
-/* Side-by-Side Image Layout (Matching sample image) */
+/* Side-by-Side Chart Placeholder Cards */
 .chart-flex-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 8px;
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-dark);
+  border-radius: 12px;
   padding: 1.5rem;
-  margin-bottom: 2rem;
-  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+  gap: 2rem;
+  box-shadow: 0 4px 8px rgba(113, 63, 18, 0.08);
 }
 
 .chart-image-wrapper {
-  max-width: 320px;
-  width: 100%;
+  width: 300px;
+  min-height: 200px;
+  background-color: #FFFFFF;
+  border: 2px dashed var(--border-dark);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .chart-img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
   object-fit: contain;
+  display: block;
 }
 
 .chart-explanation {
@@ -170,14 +181,15 @@ body {
 }
 
 .explanation-text {
-  font-size: 1.25rem;
-  color: #334155;
+  font-size: 1.2rem;
+  color: var(--text-dark);
   line-height: 1.6;
+  font-weight: 500;
 }
 
 /* Data Table */
 .table-card {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .data-table {
@@ -187,46 +199,47 @@ body {
 }
 
 .data-table th, .data-table td {
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1rem;
   text-align: left;
-  border-bottom: 1px solid #E2E8F0;
+  border-bottom: 1px solid var(--border-dark);
 }
 
 .data-table th {
-  background-color: #FEF08A;
+  background-color: var(--accent-bright);
   color: var(--text-dark);
+  font-weight: 700;
 }
 
 .data-table tr:hover {
-  background-color: #FEF9C3;
+  background-color: var(--accent-bright);
 }
 
-/* Footer */
+/* Footer Section */
 .footer {
   background-color: var(--footer-bg);
-  color: #94A3B8;
+  color: #FEF08A;
   text-align: center;
   padding: 1.5rem;
   margin-top: auto;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .genai-notice {
   font-size: 0.8rem;
-  color: #64748B;
+  color: #FDE047;
   margin-top: 0.4rem;
+  opacity: 0.85;
 }
 
-/* Responsive adjustment */
+/* Responsive Styling for Mobile Screens */
 @media (max-width: 768px) {
   .chart-flex-container {
     flex-direction: column;
     text-align: center;
-    gap: 1.5rem;
   }
 
   .chart-image-wrapper {
-    max-width: 100%;
+    width: 100%;
   }
 
   .explanation-text {
