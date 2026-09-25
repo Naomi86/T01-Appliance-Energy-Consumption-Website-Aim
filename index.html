@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appliance Energy Consumption</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="navbar">
+    <div class="nav-brand" id="nav-logo" onclick="navigateTo('home')">
+      <!-- Power Logo -->
+      <svg class="logo-icon" viewBox="0 0 100 100" width="45" height="45">
+        <circle cx="50" cy="50" r="46" fill="#FDE047" stroke="#713F12" stroke-width="5"/>
+        <path d="M55 15 L32 52 L50 52 L45 85 L68 48 L50 48 Z" fill="#EAB308" stroke="#713F12" stroke-width="3" stroke-linejoin="round"/>
+        <line x1="20" y1="50" x2="30" y2="50" stroke="#713F12" stroke-width="3" stroke-linecap="round"/>
+        <line x1="70" y1="50" x2="80" y2="50" stroke="#713F12" stroke-width="3" stroke-linecap="round"/>
+        <line x1="28" y1="28" x2="35" y2="35" stroke="#713F12" stroke-width="3" stroke-linecap="round"/>
+        <line x1="65" y1="65" x2="72" y2="72" stroke="#713F12" stroke-width="3" stroke-linecap="round"/>
+        <line x1="28" y1="72" x2="35" y2="65" stroke="#713F12" stroke-width="3" stroke-linecap="round"/>
+        <line x1="65" y1="35" x2="72" y2="28" stroke="#713F12" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-title">Energy Wise AU</span>
+    </div>
+
+    <nav class="nav-links">
+      <button class="nav-btn active" id="btn-home" onclick="navigateTo('home')">Home</button>
+      <button class="nav-btn" id="btn-televisions" onclick="navigateTo('televisions')">Televisions</button>
+      <button class="nav-btn" id="btn-about" onclick="navigateTo('about')">About Us</button>
+    </nav>
+  </header>
+
+  <!-- Page Content Container -->
+  <main class="content">
+
+    <!-- PAGE 1: HOME -->
+    <section id="page-home" class="page-section active-page">
+      <div class="hero">
+        <h1>Appliance Energy Consumption in Australia</h1>
+        <p class="subtitle">Empowering Australian households with insights on energy efficiency, costs, and sustainability ratings.</p>
+      </div>
+
+      <div class="grid-container">
+        <div class="card">
+          <h3>⚡ Energy Rating Label</h3>
+          <p>Australia’s mandatory Energy Rating Label helps consumers compare the energy efficiency and running costs of household appliances before purchase.</p>
+        </div>
+        <div class="card">
+          <h3>📺 Television Consumption</h3>
+          <p>Modern display technologies like LCD (LED) and OLED vary significantly in kWh usage per year. Choosing an efficient model reduces electricity bills.</p>
+        </div>
+        <div class="card">
+          <h3>🌱 Environmental Impact</h3>
+          <p>Reducing household energy consumption directly lowers carbon emissions across the Australian energy grid.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: TELEVISIONS -->
+    <section id="page-televisions" class="page-section">
+      <div class="hero">
+        <h1>Television Energy Efficiency</h1>
+        <p class="subtitle">Overview of screen technologies and market presence in Australia.</p>
+      </div>
+
+      <!-- Image Screenshot & Explanation Section -->
+      <div class="chart-flex-container">
+        <div class="chart-image-wrapper">
+          <!-- Replace 'pie-chart.png' with your image path -->
+          <img src="pie-chart.png" alt="Screen Technology Pie Chart" class="chart-img">
+        </div>
+        <div class="chart-explanation">
+          <p class="explanation-text">The type of screen technology that are currently available in Australia are LCD, LCD (LED) and OLED.</p>
+        </div>
+      </div>
+
+      <!-- Television Data Table -->
+      <div class="card table-card">
+        <h3>Common TV Models & Energy Comparison</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Brand & Model</th>
+              <th>Screen Size</th>
+              <th>Technology</th>
+              <th>Star Rating</th>
+              <th>Est. Annual Consumption</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Samsung AU7000</td>
+              <td>55"</td>
+              <td>LCD (LED)</td>
+              <td>5.0 ★</td>
+              <td>280 kWh/yr</td>
+            </tr>
+            <tr>
+              <td>LG OLED C3</td>
+              <td>65"</td>
+              <td>OLED</td>
+              <td>4.5 ★</td>
+              <td>350 kWh/yr</td>
+            </tr>
+            <tr>
+              <td>Sony Bravia X80K</td>
+              <td>50"</td>
+              <td>LCD (LED)</td>
+              <td>4.0 ★</td>
+              <td>310 kWh/yr</td>
+            </tr>
+            <tr>
+              <td>Hisense A6HAU</td>
+              <td>43"</td>
+              <td>LCD</td>
+              <td>3.5 ★</td>
+              <td>295 kWh/yr</td>
+            </tr>
+            <tr>
+              <td>TCL C845</td>
+              <td>65"</td>
+              <td>LCD (LED)</td>
+              <td>5.5 ★</td>
+              <td>320 kWh/yr</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PAGE 3: ABOUT US -->
+    <section id="page-about" class="page-section">
+      <div class="hero">
+        <h1>About Us</h1>
+        <p class="subtitle">Demonstration website for COS30045 Data Visualisation.</p>
+      </div>
+
+      <div class="card">
+        <h3>Project Purpose</h3>
+        <p>This interactive website was created as part of the COS30045 Interactive Data Visualisation unit (Task T01). It showcases basic web technologies including HTML5, CSS3, JavaScript, and GitHub repository hosting via Vercel.</p>
+        <p>The site serves as a foundation for embedding future data visualisations focusing on energy metrics across Australian households.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2026 Student Name | COS30045 Data Visualisation</p>
+    <p class="genai-notice">GenAI Acknowledgement: Code structure assisted by Generative AI for academic demonstration purposes.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
