@@ -8,11 +8,11 @@
 </head>
 <body>
 
-  <!-- Top Navigation Header -->
+  <!-- Top Navigation Bar -->
   <header class="navbar">
-    <div class="nav-brand" id="nav-logo" onclick="navigateTo('home')">
-      <!-- Power Logo -->
-      <svg class="logo-icon" viewBox="0 0 100 100" width="45" height="45">
+    <div class="nav-brand" onclick="navigateTo('home')">
+      <!-- Power Bolt Logo matching image styling -->
+      <svg class="logo-icon" viewBox="0 0 100 100" width="42" height="42">
         <circle cx="50" cy="50" r="46" fill="#FDE047" stroke="#713F12" stroke-width="5"/>
         <path d="M55 15 L32 52 L50 52 L45 85 L68 48 L50 48 Z" fill="#EAB308" stroke="#713F12" stroke-width="3" stroke-linejoin="round"/>
         <line x1="20" y1="50" x2="30" y2="50" stroke="#713F12" stroke-width="3" stroke-linecap="round"/>
@@ -32,28 +32,28 @@
     </nav>
   </header>
 
-  <!-- Page Content Container -->
+  <!-- Main Content Container -->
   <main class="content">
 
     <!-- PAGE 1: HOME -->
     <section id="page-home" class="page-section active-page">
       <div class="hero">
         <h1>Appliance Energy Consumption in Australia</h1>
-        <p class="subtitle">Empowering Australian households with insights on energy efficiency, costs, and sustainability ratings.</p>
+        <p class="subtitle">A demonstration website for tracking efficiency, costs, and market standards across Australian households.</p>
       </div>
 
       <div class="grid-container">
         <div class="card">
-          <h3>⚡ Energy Rating Label</h3>
-          <p>Australia’s mandatory Energy Rating Label helps consumers compare the energy efficiency and running costs of household appliances before purchase.</p>
+          <h3>⚡ Energy Rating System</h3>
+          <p>Australia’s mandatory Star Rating system enables consumers to evaluate real-world energy efficiency and projected operating costs before purchasing appliances.</p>
         </div>
         <div class="card">
           <h3>📺 Television Consumption</h3>
-          <p>Modern display technologies like LCD (LED) and OLED vary significantly in kWh usage per year. Choosing an efficient model reduces electricity bills.</p>
+          <p>Display technology choices (OLED, LCD, LED) directly impact annual energy consumption (kWh/yr), standing as a significant power user in modern homes.</p>
         </div>
         <div class="card">
           <h3>🌱 Environmental Impact</h3>
-          <p>Reducing household energy consumption directly lowers carbon emissions across the Australian energy grid.</p>
+          <p>Selecting energy-efficient household products directly reduces carbon footprints and aligns with national energy sustainability benchmarks.</p>
         </div>
       </div>
     </section>
@@ -61,24 +61,53 @@
     <!-- PAGE 2: TELEVISIONS -->
     <section id="page-televisions" class="page-section">
       <div class="hero">
-        <h1>Television Energy Efficiency</h1>
-        <p class="subtitle">Overview of screen technologies and market presence in Australia.</p>
+        <h1>Television Market Analysis</h1>
+        <p class="subtitle">Detailed breakdown of screen technologies, efficiency ratings, and usage statistics in Australia.</p>
       </div>
 
-      <!-- Image Screenshot & Explanation Section -->
+      <!-- CHART SECTION 1 -->
       <div class="chart-flex-container">
         <div class="chart-image-wrapper">
-          <!-- Replace 'pie-chart.png' with your image path -->
-          <img src="pie-chart.png" alt="Screen Technology Pie Chart" class="chart-img">
+          <img src="chart1.png" alt="Screen Technology Distribution Chart" class="chart-img">
         </div>
         <div class="chart-explanation">
           <p class="explanation-text">The type of screen technology that are currently available in Australia are LCD, LCD (LED) and OLED.</p>
         </div>
       </div>
 
-      <!-- Television Data Table -->
+      <!-- CHART SECTION 2 -->
+      <div class="chart-flex-container">
+        <div class="chart-image-wrapper">
+          <img src="chart2.png" alt="Average Energy Consumption by Screen Size" class="chart-img">
+        </div>
+        <div class="chart-explanation">
+          <p class="explanation-text">Average annual energy consumption increases proportionately with screen size across all panel types in the Australian market.</p>
+        </div>
+      </div>
+
+      <!-- CHART SECTION 3 -->
+      <div class="chart-flex-container">
+        <div class="chart-image-wrapper">
+          <img src="chart3.png" alt="Star Rating vs Annual Running Cost" class="chart-img">
+        </div>
+        <div class="chart-explanation">
+          <p class="explanation-text">Higher star-rated televisions significantly lower ongoing electricity costs, saving up to 40% annually compared to lower-rated models.</p>
+        </div>
+      </div>
+
+      <!-- CHART SECTION 4 -->
+      <div class="chart-flex-container">
+        <div class="chart-image-wrapper">
+          <img src="chart4.png" alt="Standby Power Consumption Comparison" class="chart-img">
+        </div>
+        <div class="chart-explanation">
+          <p class="explanation-text">Modern televisions feature ultra-low standby power modes, meeting strict Australian Greenhouse and Energy Standards (GEMS).</p>
+        </div>
+      </div>
+
+      <!-- Data Table Card -->
       <div class="card table-card">
-        <h3>Common TV Models & Energy Comparison</h3>
+        <h3>Sample Television Energy Standards</h3>
         <table class="data-table">
           <thead>
             <tr>
@@ -139,8 +168,7 @@
 
       <div class="card">
         <h3>Project Purpose</h3>
-        <p>This interactive website was created as part of the COS30045 Interactive Data Visualisation unit (Task T01). It showcases basic web technologies including HTML5, CSS3, JavaScript, and GitHub repository hosting via Vercel.</p>
-        <p>The site serves as a foundation for embedding future data visualisations focusing on energy metrics across Australian households.</p>
+        <p>This website was constructed for COS30045 Data Visualisation Task T01. It demonstrates dynamic client-side page switching using JavaScript, responsive layout styling using custom CSS matched to brand theme colors, and GitHub hosting integration via Vercel.</p>
       </div>
     </section>
 
@@ -149,7 +177,7 @@
   <!-- Footer Section -->
   <footer class="footer">
     <p>&copy; 2026 Student Name | COS30045 Data Visualisation</p>
-    <p class="genai-notice">GenAI Acknowledgement: Code structure assisted by Generative AI for academic demonstration purposes.</p>
+    <p class="genai-notice">GenAI Acknowledgement: Code structure and multi-page routing created with Generative AI assistance for academic evaluation.</p>
   </footer>
 
   <script src="script.js"></script>
